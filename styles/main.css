@@ -34,4 +34,9 @@ h6 {
 }
 .screen.open {
   pointer-events: all;
+}
+
+.hero-container {
+  display: flex;
+  padding-block: 40px;
 }/*# sourceMappingURL=main.css.map */
