@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: news-cycle;
 }
 
 body {
@@ -39,4 +39,12 @@ h6 {
 .hero-container {
   display: flex;
   padding-block: 40px;
+}
+@font-face {
+  font-family: "news-cycle";
+  src: url("../../assets/fonts/News_Cycle/NewsCycle-Regular.ttf");
+}
+@font-face {
+  font-family: "news-cycle-bold";
+  src: url("../../assets/fonts/News_Cycle/NewsCycle-Bold.ttf");
 }/*# sourceMappingURL=main.css.map */
