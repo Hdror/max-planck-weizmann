@@ -3,16 +3,17 @@
     flex-direction: column;
     align-items: center;
     gap: 80px;
-    padding-inline: 6%;
+    position: relative;
+    padding-inline: 7% 4%;
+    margin-bottom: 100px;
     h2 {
         font-size: 2.5rem;
     }
     .program-content-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 6%;
+        column-gap: 5%;
         .program-content {
-            
             h3 {
                 font-size: 1.625rem;
                 margin-bottom: 20px;
@@ -22,5 +23,39 @@
                 font-size: 1.125rem;
             }
         }
+    }
+    .know-more-btn {
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+        gap: 5px;
+        background-color: transparent;
+        border: unset;
+        &:hover {
+            background-color: $clr4;
+        }
+        .arrow-right-svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    .program-flower {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(0%,67%);
+        width: 15%;
+        z-index: -1;
+    }
+
+    .leaf-wrapper {
+        display: flex;
+        gap: 50px;
+        position: absolute;
+        left: 8%;
+        top: -15%;
+        z-index: -1;
     }
 }
