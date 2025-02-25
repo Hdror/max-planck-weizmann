@@ -553,4 +553,58 @@ h6 {
   .hamburger.active span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
+}
+.footer {
+  background-color: #161617;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+.footer .contact-container {
+  padding-inline: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (min-width: 1200px) {
+  .footer .contact-container {
+    max-width: 800px;
+    padding-inline: 0px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .footer .contact-container {
+    max-width: 1200px;
+  }
+}
+.footer .contact-container .contact-content {
+  display: flex;
+  padding-inline-start: 45px;
+  border-left: 1px solid white;
+  gap: 20px;
+  flex-direction: column;
+}
+.footer .contact-container .contact-content .logo {
+  height: 80px;
+  max-width: 300px;
+}
+.footer .contact-container .contact-content .footer-logo-left {
+  -o-object-fit: none;
+     object-fit: none;
+  margin-right: 20px;
+  padding-inline-end: 40px;
+}
+.footer .contact-container .contact-content .contant-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .contact-container .contact-content .contant-item .icon {
+  height: 15px;
+  width: auto;
+}
+.footer .contact-container .logos-container {
+  display: flex;
+  gap: 20px;
 }/*# sourceMappingURL=main.css.map */
