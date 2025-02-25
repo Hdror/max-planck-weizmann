@@ -97,8 +97,6 @@ h6 {
 }
 .hero-container .img-hero-container {
   padding-inline-start: 4%;
-  display: flex;
-  justify-content: end;
   position: relative;
   width: 50%;
 }
@@ -140,8 +138,9 @@ h6 {
 }
 .opportunities-container .opportunities-content-container {
   background-color: #f5ede3;
+  position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .opportunities-container .opportunities-content-container .opportunities-content-wrapper {
   max-width: 800px;
@@ -157,6 +156,26 @@ h6 {
 }
 .opportunities-container .opportunities-content-container .opportunities-content-wrapper .opportunities-content {
   font-size: 1.125rem;
+}
+.opportunities-container .opportunities-content-container .go-back-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 50px;
+  padding: 0;
+  right: 50px;
+  border-radius: 50%;
+  border: unset;
+  background: transparent;
+  cursor: pointer;
+}
+.opportunities-container .opportunities-content-container .go-back-btn:hover {
+  background-color: #c3c0c0;
+}
+.opportunities-container .opportunities-content-container .go-back-btn .arrow-back-svg {
+  width: 40px;
+  height: 40px;
 }
 .opportunities-container .opportunities-img-container {
   position: absolute;
@@ -180,4 +199,29 @@ h6 {
   z-index: 999;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.program-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding-inline: 6%;
+}
+.program-container h2 {
+  font-size: 2.5rem;
+}
+.program-container .program-content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 6%;
+       column-gap: 6%;
+}
+.program-container .program-content-container .program-content h3 {
+  font-size: 1.625rem;
+  margin-bottom: 20px;
+  font-family: news-cycle-bold;
+}
+.program-container .program-content-container .program-content p {
+  font-size: 1.125rem;
 }/*# sourceMappingURL=main.css.map */
