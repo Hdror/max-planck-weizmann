@@ -1,9 +1,17 @@
 .hero-container {
     display: flex;
     padding-block: 40px;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
     position: relative;
     margin-bottom: 225px;
     .hero-content-container {
+        @media screen and (max-width: 900px) {
+            width: 90%;
+        }
         width: 50%;
         font-size: 1.375rem;
         padding-inline: 10% 5.5%;
@@ -45,6 +53,11 @@
             align-items: center;
             justify-content: center;
             line-height: 1.2;
+            cursor: pointer;
+            border: 1px solid transparent;
+            &:hover {
+                border: 1px solid black;
+            }
         }
     }
 
@@ -52,6 +65,9 @@
         padding-inline-start: 4%;
         position: relative;
         width: 50%;
+        @media screen and (max-width: 900px) {
+            width: 90%;
+        }
         .img-wrapper {
             position: relative;
             width: 100%;
@@ -82,5 +98,4 @@
         width: 60%;
         transform: translateY(41%);
     }
-   
 }

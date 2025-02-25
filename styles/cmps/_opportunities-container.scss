@@ -45,16 +45,24 @@
         }
     }
     .opportunities-img-container {
-        position: absolute;
-        width: 50%;
-        left: 0;
-        top: -30px;
-        .left-orange-line-svg {
+        display: none;
+        @media (min-width: 1000px) {
+            display: block;
             position: absolute;
-            left: 32px;
-            bottom: 34px;
-            width: 45%;
+            width: 30%;
+            left: 0;
+            top: -30px;
+            .left-orange-line-svg {
+                position: absolute;
+                left: 32px;
+                bottom: 34px;
+                width: 45%;
+            }
         }
+        @media (min-width: 1400px) {
+            width: 50%;
+        }
+      
         .red-flowers-svg {
             position: absolute;
             left: 0;

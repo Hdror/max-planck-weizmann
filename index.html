@@ -10,40 +10,32 @@
 </head>
 
 <body>
-    <!-- <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16"> -->
+    <header class="header">
+        <img src="./assets/imgs/header/left-logo.svg" alt="Left Logo" class="logo logo-left">
 
-    <!-- Logo -->
-    <!-- <div class="text-2xl font-bold text-blue-600">MyLogo</div> -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Institutions</a></li>
+                <li class="nav-item"><a href="#">Program</a></li>
+                <li class="nav-item"><a href="#">Application Process</a></li>
+                <li class="nav-item"><a href="#">Current Postdocs & Alumni</a></li>
+                <li class="nav-item"><a href="#">FAQ</a></li>
+                <li class="nav-item"><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
 
-    <!-- Hamburger Menu Button (Checkbox) -->
-    <!-- <input type="checkbox" id="menu-toggle" class="hidden peer">
-                <label for="menu-toggle" class="md:hidden cursor-pointer">
-                    <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </label> -->
+        <img src="./assets/imgs/header/right-logo.png" alt="Right Logo" class="logo logo-right">
 
-    <!-- Desktop Menu -->
-    <!-- <div class="hidden md:flex space-x-6">
-                    <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
-                </div>
-            </div>
-        </div> -->
-
-    <!-- Mobile Menu (Toggled by Checkbox) -->
-    <!-- <div class="hidden peer-checked:block md:hidden bg-white border-t">
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Services</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Contact</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav> -->
-    <main class="main-container">
+    </header>
+
+    <div class="overlay"></div>
+    <main class="main-container" style="padding-top: 100px;">
         <section class="hero-container">
             <div class="hero-content-container">
                 <h1 class="headline">Max Planck — Weizmann Joint</h1>
@@ -134,9 +126,90 @@
                 <img src="./assets/imgs/program-container/leaf2.svg" alt="flower">
                 <img src="./assets/imgs/program-container/leaf1.svg" alt="flower">
             </div>
-
         </section>
+        <sectiion class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-wrapper">
+                <div class="faq-content">
+
+                    <div class="img-wrapper">
+                        <img src="./assets/imgs/faq-container/first.png" alt="people">
+                    </div>
+                    <div class="text-wrapper">
+                        <h3>Who is eligible to apply based on citizenship?</h3>
+                        <p>Candidates of any nationality are welcome to apply, provided they meet the eligibility
+                            criteria
+                            outlined on the program page.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <div class="faq-content">
+                    <div class="img-wrapper">
+                        <img src="./assets/imgs/faq-container/second.png" alt=building"">
+                    </div>
+                    <div class="text-wrapper">
+                        <h3>Do I need to be physically in Germany or Israel during the program?</h3>
+                        <p>Yes, you must be physically present at either the Weizmann Institute of Science or an MPG
+                            institute as indicated in your application regarding the planned research split.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <div class="faq-content">
+                    <div class="img-wrapper">
+                        <img src="./assets/imgs/faq-container/third.png" alt="people">
+                    </div>
+                    <div class="text-wrapper">
+                        <h3>What is the first step in the application process?</h3>
+                        <p>The first step is to reach out to researchers at MPG (see list of institutions) and WIS to
+                            discuss potential collaborative projects for which researchers from both institutions can
+                            serve
+                            as joint hosts.</p>
+                        <p class="note-text">
+                            Note: Applications submitted without prior contact with PIs from both institutions will be
+                            automatically rejected.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img class="right-flower" src="./assets/imgs/faq-container/right-flower.svg" alt="flower">
+            <img class="left-flower" src="./assets/imgs/faq-container/left-flower.svg" alt="flower">
+        </sectiion>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
+            const overlay = document.querySelector('.overlay');
+
+            // Toggle menu when hamburger is clicked
+            hamburger.addEventListener('click', function () {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+            });
+
+            // Close menu when clicking outside
+            overlay.addEventListener('click', function () {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+
+            // Close menu when window is resized to desktop size
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768 && nav.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

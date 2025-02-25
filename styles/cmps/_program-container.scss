@@ -11,6 +11,11 @@
     }
     .program-content-container {
         display: grid;
+        @media screen and (max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 5%;
         .program-content {
@@ -33,6 +38,7 @@
         gap: 5px;
         background-color: transparent;
         border: unset;
+        cursor: pointer;
         &:hover {
             background-color: $clr4;
         }
@@ -45,7 +51,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        transform: translate(0%,67%);
+        transform: translate(0%, 67%);
         width: 15%;
         z-index: -1;
     }
