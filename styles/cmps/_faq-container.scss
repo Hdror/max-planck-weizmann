@@ -44,6 +44,9 @@
             .text-wrapper {
                 display: flex;
                 flex-direction: column;
+                @media screen and (max-width:500px){
+                    padding-inline: 15px;
+                }
                 h3 {
                     font-family: news-cycle-bold;
                     font-size: 1.5rem;

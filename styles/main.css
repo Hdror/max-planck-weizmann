@@ -389,6 +389,11 @@ h6 {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 500px) {
+  .faq-container .faq-wrapper .faq-content .text-wrapper {
+    padding-inline: 15px;
+  }
+}
 .faq-container .faq-wrapper .faq-content .text-wrapper h3 {
   font-family: news-cycle-bold;
   font-size: 1.5rem;
@@ -564,8 +569,15 @@ h6 {
 .footer .contact-container {
   padding-inline: 30px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (min-width: 1000px) {
+  .footer .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer .contact-container {
@@ -581,9 +593,15 @@ h6 {
 .footer .contact-container .contact-content {
   display: flex;
   padding-inline-start: 45px;
-  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
   gap: 20px;
   flex-direction: column;
+}
+@media screen and (min-width: 1000px) {
+  .footer .contact-container .contact-content {
+    border-left: 1px solid white;
+  }
 }
 .footer .contact-container .contact-content .logo {
   height: 80px;
