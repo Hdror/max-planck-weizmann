@@ -1,9 +1,11 @@
 
+// ## SETUP ## 
+@import '../styles/setup/_typography.scss';
+@import '../styles/setup/_variables.scss';
+
 // ## BASICS ##
 @import '../styles/basics/_base.scss';
 
 // ## CMPS ##
 @import '../styles/cmps/_hero-container.scss';
-
-// ## SETUP ## 
-@import '../styles/setup/typography.scss';
+@import '../styles/cmps/opportunities-container';

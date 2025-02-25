@@ -1,19 +1,88 @@
 .hero-container {
     display: flex;
     padding-block: 40px;
-
+    position: relative;
+    margin-bottom: 225px;
     .hero-content-container {
+        width: 50%;
+        font-size: 1.375rem;
+        padding-inline: 10% 5.5%;
+        padding-top: 130px;
         .headline {
+            line-height: 1.2;
+            font-size: 2.9rem;
+            letter-spacing: 3px;
         }
         .sub-headline {
+            font-size: 4.4rem;
+            line-height: 1.4;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
         }
         .hero-text {
+            line-height: 1.2;
+            &:last-of-type {
+                padding-top: 15px;
+                margin-bottom: 40px;
+            }
         }
     }
 
     .first-step-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: news-cycle-bold;
         .first-step-btn {
-        
+            font-family: news-cycle-bold;
+            letter-spacing: 1.5px;
+            padding: 18px;
+            border: unset;
+            font-size: 1.25rem;
+            background-color: $clr1;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
         }
     }
+
+    .img-hero-container {
+        padding-inline-start: 4%;
+        display: flex;
+        justify-content: end;
+        position: relative;
+        width: 50%;
+        .img-wrapper {
+            position: relative;
+            width: 100%;
+            height: fit-content;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 8%;
+                right: 0px;
+                width: 102.5%;
+                height: 100%;
+                background-color: $clr2;
+                z-index: -1;
+            }
+            .hero-orange-line {
+                position: absolute;
+                z-index: 99;
+                right: 26px;
+                top: 28px;
+                width: 50%;
+            }
+        }
+    }
+    .hero-container-flowers-svg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 60%;
+        transform: translateY(41%);
+    }
+   
 }
